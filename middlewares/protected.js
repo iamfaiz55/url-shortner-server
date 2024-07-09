@@ -4,9 +4,9 @@ const User = require("../models/User")
 
 exports.userPRotected = asyncHandler(async (req, res, next) => {
     const token = req.cookies.devAuth
-    if (!token) {
-        return res.status(401).json({ message: "No Cookie Fount" })
-    }
+    // if (!token) {
+    //     return res.status(401).json({ message: "No Cookie Fount" })
+    // }
 
     jwt.verify(token, process.env.JWT_KEY, (err, decode) => {
         if (err) {

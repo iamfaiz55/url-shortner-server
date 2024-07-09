@@ -5,7 +5,7 @@ const validator = require("validator")
 const User = require("../models/User")
 
 exports.register = asyncHander(async (req, res) => {
-    const { name, email, password } = req.body
+    const { name, email, password, role } = req.body
     if (!validator.isEmail(email)) {
         return res.status(400).json("Please Provide Valid Email")
     }
