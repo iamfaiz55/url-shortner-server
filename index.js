@@ -20,7 +20,7 @@ app.use(cors({
 
 // routes
 app.use("/api/auth", require("./routes/authRoute"))
-app.use("/api/user", userPRotected, require("./routes/userRoutes"))
+app.use("/api/user", require("./routes/userRoutes"))
 app.use("/api/url", require("./routes/urlRoute"))
 app.use("/api/admin", adminPRotected, require("./routes/adminRoutes"))
 
