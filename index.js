@@ -19,10 +19,10 @@ app.use(cors({
 }))
 
 // routes
-app.use("/api/v1/auth", require("./routes/authRoute"))
-app.use("/api/v1/user", userPRotected, require("./routes/userRoutes"))
-app.use("/api/v1/url", require("./routes/urlRoute"))
-app.use("/api/v1/admin", adminPRotected, require("./routes/adminRoutes"))
+app.use("/api/auth", require("./routes/authRoute"))
+app.use("/api/user", userPRotected, require("./routes/userRoutes"))
+app.use("/api/url", require("./routes/urlRoute"))
+app.use("/api/admin", adminPRotected, require("./routes/adminRoutes"))
 
 // 404
 app.use("*", (req, res) => {

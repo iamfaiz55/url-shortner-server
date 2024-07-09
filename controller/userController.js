@@ -23,7 +23,7 @@ exports.addUrl = asyncHandler(async (req, res) => {
 })
 exports.getUserUrl = asyncHandler(async (req, res) => {
     const result = await Url.find({ userId: req.body.userId })
-
+// console.log(result);
     res.status(200).json({ message: "URL Fetch success", result })
 })
 exports.deleteUserUrl = asyncHandler(async (req, res) => {
