@@ -22,7 +22,8 @@ exports.addUrl = asyncHandler(async (req, res) => {
     res.status(201).json({ message: "URL create success" })
 })
 exports.getUserUrl = asyncHandler(async (req, res) => {
-    const result = await Url.find({ userId: req.body.userId })
+    const {id} = req.params
+    const result = await Url.find({ userId: id })
 // console.log(result);
     res.status(200).json({ message: "URL Fetch success", result })
 })

@@ -4,7 +4,7 @@ const { getUserUrl, addUrl, updateUserUrl, deleteUserUrl } = require("../control
 const router = require("express").Router()
 
 router
-    .get("/url", getUserUrl)
+    .get("/url/:id", getUserUrl)
     .post("/url-create", addUrl)
     .put("/url-update/:urlId", updateUserUrl)
     .delete("/url-remove/:urlId", deleteUserUrl)
